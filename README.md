@@ -2,7 +2,7 @@
 
 Highto is a personal wellbeing, safety, family and smart-living platform with one AI companion: **JORDAN**.
 
-## Run in GitHub Codespaces
+## Develop in GitHub Codespaces
 
 ```bash
 npm install
@@ -10,6 +10,16 @@ npm run dev -- --host 0.0.0.0
 ```
 
 Open the forwarded Vite port. The marketing site is at `/`; the interactive product workspace is at `/app.html`.
+
+## Deploy free with GitHub Pages
+
+The repository includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`.
+
+1. Open **Settings → Pages** in this repository.
+2. Under **Build and deployment**, choose **GitHub Actions** as the source.
+3. Push to `main` or manually run **Deploy Highto to GitHub Pages** from the Actions tab.
+4. Once the workflow succeeds, the site will be available at:
+   `https://xah1l.github.io/IDGAF/`
 
 ## Included
 
