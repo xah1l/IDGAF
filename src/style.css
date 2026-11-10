@@ -92,3 +92,16 @@ body{background:#f5faff;color:var(--ink)}
 .cta{background:linear-gradient(110deg,#dceeff,#eafaff 55%,#d9f8fb);border:1px solid #cfe8f6}
 footer{border-color:var(--line)}
 @media(max-width:650px){.art{min-height:275px;margin-top:12px}.jordan-caption{bottom:0}.jordan{padding:25px 18px}.features p{min-height:78px}}
+/* Image-led blue-white-cyan visual polish */
+:root{--ink:#102b43;--line:#dceaf3}body{background:radial-gradient(ellipse at 92% 6%,#e0f8ff 0,transparent 25%),#f5faff;color:var(--ink)}
+.hero{background:linear-gradient(110deg,#eaf6ffed,#f6fcffdc 50%,#e2faffd9),url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1800&q=80") center/cover;border:1px solid #d9edf7;box-shadow:0 22px 55px #1769b510;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 42%,#a9efff55,transparent 30%),linear-gradient(120deg,transparent,#fff5);pointer-events:none}
+.hero-copy,.art{position:relative;z-index:1}.glow{animation:glowPulse 7s ease-in-out infinite}
+.values{box-shadow:0 15px 38px #1769b50b}.values>div{transition:transform .2s}.values>div:hover{transform:translateY(-3px)}
+.features article,.domain,.integrations div{transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
+.features article:hover,.domain:hover,.integrations div:hover{transform:translateY(-5px);box-shadow:0 18px 38px #1769b518;border-color:#a8ddeb}
+.jordan{background:linear-gradient(105deg,#e9f5ffed,#f7fcffdf 55%,#e0faffdd),url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=80") center/cover;border:1px solid #d8eaf5;box-shadow:0 18px 42px #1769b50d}
+.disc{animation:glowPulse 8s ease-in-out infinite}
+.cta{background:linear-gradient(110deg,#dceeffed,#eafaffdf 55%,#d9f8fbeb),url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=80") center/cover;border:1px solid #cfe8f6;box-shadow:0 18px 40px #1769b50d}
+@keyframes glowPulse{0%,100%{filter:saturate(1);transform:scale(1)}50%{filter:saturate(1.16);transform:scale(1.025)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
