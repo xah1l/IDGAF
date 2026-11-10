@@ -105,3 +105,53 @@ footer{border-color:var(--line)}
 .cta{background:linear-gradient(110deg,#dceeffed,#eafaffdf 55%,#d9f8fbeb),url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=80") center/cover;border:1px solid #cfe8f6;box-shadow:0 18px 40px #1769b50d}
 @keyframes glowPulse{0%,100%{filter:saturate(1);transform:scale(1)}50%{filter:saturate(1.16);transform:scale(1.025)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Highto visual refresh — landing experience */
+:root{--h-ink:#102d49;--h-blue:#176bd1;--h-cyan:#11b9d0}
+body{background:#f6fbff;color:var(--h-ink)}
+.shell{background:radial-gradient(ellipse at 88% 6%,#dff8ff 0,transparent 26%),linear-gradient(180deg,#f8fcff,#fff 58%,#effaff)}
+.top{background:#ffffffd9;border-bottom:1px solid #e2edf5;backdrop-filter:blur(18px)}
+.brand i{background:linear-gradient(135deg,#176bd1,#11bfd0);box-shadow:0 7px 18px #176bd133}
+.btn{background:linear-gradient(105deg,#176bd1,#0b9fc2);box-shadow:0 9px 22px #176bd12c;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 13px 28px #176bd13b}
+.btn.white{background:#fff;color:#1769b2;border:1px solid #d9eaf5;box-shadow:0 6px 18px #1d5a8010}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(115deg,#f6fbffed 0%,#f5fcffdf 45%,#e6faffaa 100%),url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1900&q=88") center/cover}
+.hero:after{content:"";position:absolute;z-index:-1;right:-7%;top:4%;width:48%;height:88%;border-radius:48% 0 0 48%;background:linear-gradient(140deg,#176bd11c,#11b9d027);filter:blur(2px)}
+.hero-copy h1{color:#102d49;letter-spacing:-2.5px}
+.hero-copy h1 em{background:linear-gradient(90deg,#176bd1,#0bb7c8);background-clip:text;-webkit-background-clip:text;color:transparent}
+.tag{color:#087da7;background:#e3f8fc;border:1px solid #cceef4;border-radius:30px;padding:8px 13px}
+.proof{color:#66849a}
+.art{position:relative}
+.art:before{content:"";position:absolute;inset:4% 0 0 5%;border-radius:46%;background:url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=80") center/cover;opacity:.17;filter:saturate(.8);mask-image:radial-gradient(ellipse,#000 25%,transparent 72%)}
+.glow{background:radial-gradient(circle,#6de7f255 0,#65bdf52c 42%,transparent 70%);animation:h-pulse 5s ease-in-out infinite}
+.robot{filter:drop-shadow(0 25px 32px #125d8a2c);animation:h-hover 5s ease-in-out infinite}
+.robot .head,.robot .body{background:linear-gradient(145deg,#fff,#dff7ff);border:1px solid #c9eaf6;box-shadow:inset 0 2px 0 #fff,0 14px 35px #145e8a20}
+.robot .face{background:linear-gradient(145deg,#153d5b,#071e38);box-shadow:0 0 30px #35d6df42}
+.robot .face i{background:#8bf5ee;box-shadow:0 0 12px #50e6e7}
+.robot-caption{background:#ffffffd9;border:1px solid #d8ebf4;box-shadow:0 12px 30px #1b5d7e16;backdrop-filter:blur(12px)}
+.values>div{border:1px solid #e0edf5;background:linear-gradient(145deg,#fff,#f4fbff);border-radius:17px;box-shadow:0 8px 24px #1c5c8010}
+.values>div:first-child,.values>div:nth-child(2),.values>div:nth-child(3),.values>div:nth-child(4){color:#1683b1}
+.section{background:transparent}
+.section label,.jordan label{color:#1384b5}
+.section h2,.jordan h2{color:#102d49;letter-spacing:-1.2px}
+.domains .domain,.features article{border:1px solid #deebf4;background:linear-gradient(150deg,#fff,#f4fbff);border-radius:20px;box-shadow:0 10px 28px #1b5c8010;transition:transform .24s,box-shadow .24s,border-color .24s}
+.domains .domain:hover,.features article:hover{transform:translateY(-5px);border-color:#b8e2ef;box-shadow:0 18px 36px #1b5c801b}
+.domain i,.features article>i{display:grid;place-items:center;border-radius:15px;background:linear-gradient(145deg,#dff0ff,#ddfbfb);color:#137eae;box-shadow:inset 0 1px #fff,0 6px 14px #176ba315}
+.domain b,.features h3{color:#173b58}
+.domain small,.features p,.section>p{color:#6d879b}
+.jordan{position:relative;isolation:isolate;overflow:hidden;border:1px solid #d8edf5;border-radius:28px;background:linear-gradient(110deg,#e8f5ffed,#e4fbfbdc),url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1500&q=80") center/cover;box-shadow:0 18px 45px #176bd115}
+.jordan:after{content:"";position:absolute;z-index:-1;right:-7%;top:-45%;width:48%;height:190%;border:1px solid #4ca9d126;border-radius:50%;box-shadow:0 0 0 28px #4ca9d10b,0 0 0 58px #4ca9d108}
+.disc{background:radial-gradient(circle at 40% 30%,#fff,#dff7ff 58%,#bdeefa);border:1px solid #c5e8f5;box-shadow:0 20px 48px #176bd126;animation:h-hover 5s ease-in-out infinite}
+.mini-face{background:linear-gradient(145deg,#173e5a,#071d35);box-shadow:0 0 28px #45eaff50}
+.mini-face i{background:#80f5ef;box-shadow:0 0 12px #52f2ed}
+.jordan li{color:#52758d}
+.features article p{line-height:1.75}
+.integrations>div{border:1px solid #dfedf5;background:linear-gradient(145deg,#fff,#f4fbff);border-radius:16px;color:#1682b0;box-shadow:0 7px 20px #1b5c8010}
+.cta{position:relative;isolation:isolate;overflow:hidden;border-radius:26px;background:linear-gradient(110deg,#0d4c86ed,#087cadE8 55%,#10b7c9d9),url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85") center/cover;box-shadow:0 20px 46px #176bd125}
+.cta h2,.cta p{color:#fff}
+.cta>span{color:#c4f8ff;text-shadow:0 0 35px #b5f8ff80;animation:h-pulse 4s ease-in-out infinite}
+footer{border-color:#e0edf5;color:#71899b}
+@keyframes h-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes h-pulse{0%,100%{opacity:.72;transform:scale(1)}50%{opacity:1;transform:scale(1.045)}}
+@media(max-width:760px){.hero{background-position:center}.hero:after{right:-24%;width:78%;opacity:.6}.jordan{background-position:center}.cta{background-position:center}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
