@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -9,8 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#FFFFFF;--ink:#073B3D;--mut:#4A7274;--card:#F1FAF9cc;--line:#CDE7E5;--brand:#0B8A86;--on:#fff;--yel:#FFCE3A;--yon:#073B3D;--mint:#CFF2EF;--lav:#EAF5C8;--peach:#FFF0B8;--sky:#D3F3F8;--sun:#DCE9E8;--mi:#0A7F7B;--li:#587A00;--pi:#8A6400;--si:#0B7A92;--ui:#305F63;--blob:.5;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#04292B;--ink:#F4FFFE;--mut:#9CC4C2;--card:#0A3C3Ebf;--line:#16595A;--brand:#3FD8CF;--on:#04292B;--yel:#FFD23F;--yon:#073B3D;--mint:#0B4442;--lav:#34400C;--peach:#4D3E0B;--sky:#0B3F4D;--sun:#1D4244;--mi:#5FE8DF;--li:#CFEB66;--pi:#FFD84D;--si:#6FDDF2;--ui:#A5CFD0;--blob:.35;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#04292B;--ink:#F4FFFE;--mut:#9CC4C2;--card:#0A3C3Ebf;--line:#16595A;--brand:#3FD8CF;--on:#04292B;--yel:#FFD23F;--yon:#073B3D;--mint:#0B4442;--lav:#34400C;--peach:#4D3E0B;--sky:#0B3F4D;--sun:#1D4244;--mi:#5FE8DF;--li:#CFEB66;--pi:#FFD84D;--si:#6FDDF2;--ui:#A5CFD0;--blob:.35;color-scheme:dark}
+:root[data-theme="dark"]{--bg:#000;--ink:#F5F5F5;--mut:#A3A3A3;--card:#111111bf;--line:#262626;--brand:#FFD23F;--on:#000;--yel:#FFD23F;--yon:#111;--mint:#161616;--lav:#1d1c10;--peach:#221c08;--sky:#161616;--sun:#161616;--mi:#E5E5E5;--li:#CFEB66;--pi:#FFD84D;--si:#D4D4D4;--ui:#BDBDBD;--blob:.35;color-scheme:dark}:root[data-theme=dark] .blob:nth-child(1){background:#777}:root[data-theme=dark] .cta{background:#111;color:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px));height:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Figtree,system-ui,sans-serif;overflow-x:hidden;min-height:100%}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
@@ -147,7 +146,7 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
 @media(max-width:640px){.fc{display:none}}
 .jstage{grid-column:1/-1;position:relative;height:clamp(340px,44vw,440px);border-radius:28px;overflow:hidden;border:1px solid #ffffff1c;background:radial-gradient(55% 45% at 50% 84%,#ffd23f30,transparent 70%),#ffffff06}
 .jstage canvas{position:absolute;inset:0;width:100%;height:100%;display:none;cursor:grab;touch-action:pan-y}.jstage.ready canvas{display:block}.jstage.ready .fb{display:none}
-.fb{position:absolute;inset:0;display:grid;place-items:center}.fb #bot{width:min(60%,300px)}.fb .fl,.fb .arm{animation:none}.hint{position:absolute;left:18px;bottom:14px;font-size:12px;color:#a9c4c1;pointer-events:none}
+.fb{position:absolute;inset:0;display:grid;place-items:center}.fb #bot{width:min(60%,300px)}.fb .arm{animation:none}.hint{position:absolute;left:18px;bottom:14px;font-size:12px;color:#a9c4c1;pointer-events:none}
 .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:20px 0;margin-top:24px;border-block:1px solid var(--line)}.trust span{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500}.trust .i{font-size:22px;color:var(--brand);flex:none}
 .pv{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .cta{position:relative;overflow:hidden;background:var(--brand);color:var(--on)}.cta::before,.cta::after{content:"";position:absolute;border:1px solid currentColor;opacity:.2;border-radius:50%;width:420px;height:420px;top:-300px;left:calc(50% - 210px)}.cta::after{width:560px;height:560px;top:-370px;left:calc(50% - 280px)}.cta>*{position:relative}.cta p{color:inherit;opacity:.82}.cta .btn{background:var(--yel);color:var(--yon);box-shadow:none}
@@ -158,7 +157,53 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
 @media(max-width:520px){.nav{padding:0 8px 0 14px}.mark{width:28px;height:28px}.logo{font-size:19px;gap:8px}.tg{width:38px;height:38px}.nr{gap:6px}.nav .btn{padding:9px 14px;font-size:13px}}
 .phone,.pt{text-align:left}.pt h3{font-size:19px;white-space:nowrap}
 @media(max-width:520px){.row>div{flex:1 1 130px;min-width:0}.row{padding:12px 14px}}
+.jsec{padding-bottom:0}.jsec .tabs{justify-content:center;margin-top:8px}
+.jstage{grid-column:auto;margin:0 -24px;height:clamp(360px,52vw,540px);border:0;border-radius:0;overflow:visible;background:radial-gradient(46% 30% at 50% 72%,color-mix(in srgb,var(--brand) 16%,transparent),transparent 72%)}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink)}.tab[aria-pressed=true]{background:var(--yel);color:var(--yon);border-color:var(--yel)}
+.chat{background:none;border:0;padding:0;min-height:250px;max-width:620px;margin:22px auto 0;-webkit-backdrop-filter:none;backdrop-filter:none}
+.msg.j{background:var(--card);border:1px solid var(--line);color:var(--ink)}.msg.u{background:var(--yel);color:var(--yon)}.dots{background:var(--card);border:1px solid var(--line)}.dots i{background:var(--mut)}
+@media(max-width:520px){.jstage{margin:0 -16px}}
+.jstage{height:clamp(300px,42vw,400px);background:radial-gradient(32% 46% at 50% 50%,color-mix(in srgb,var(--brand) 24%,transparent),transparent 74%)}.jstage canvas{cursor:pointer}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ecg path{stroke-dashoffset:0}}
+[hidden]{display:none!important}.wrap,#login,#shell{display:none}body.v-landing .wrap{display:block}body.v-app .bg{display:none}body.v-login #login{display:grid}body.v-app #shell{display:flex}
+#login{min-height:100vh;place-items:center;padding:24px}.lc{width:min(100%,400px);display:flex;flex-direction:column;gap:14px;padding:32px;border:1px solid var(--line);border-radius:30px;background:var(--card);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}.lc h1{font-size:32px;font-weight:800}.lc p,.pg>p{margin:0;color:var(--mut);font-size:15px}.lc form{display:flex;flex-direction:column;gap:12px}label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600}
+input{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:12px 14px;width:100%}.seg{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:30px}.seg button{flex:1;border:0;border-radius:26px;padding:9px;background:none;font-weight:600;font-size:14px}.seg [aria-pressed=true]{background:var(--yel);color:var(--yon)}#lerr{color:#d9381e;min-height:1.2em;font-size:13px}
+#shell{height:100vh;height:100dvh}.sd{width:230px;flex:none;display:flex;flex-direction:column;padding:18px 14px;border-right:1px solid var(--line);background:var(--card)}#sn{display:flex;flex-direction:column;gap:4px;margin-top:14px}#sn a{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:16px;font-weight:500;color:var(--mut)}#sn a[aria-current=true]{background:var(--bg);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}.sdf{margin-top:auto;display:flex;gap:8px}
+#vw{flex:1;min-width:0;overflow:auto}.pg{max-width:720px;margin:auto;padding:24px 20px;min-height:100%;display:flex;flex-direction:column;gap:12px}.pg h2{font-size:30px;font-weight:800}.pg[hidden]{display:none!important}#p-chat{height:100%;padding-bottom:12px}#astage .jstage{margin:0;height:230px;flex:none}#msgs{flex:1;overflow:auto;display:flex;flex-direction:column;gap:10px;padding:6px 2px}
+#sy{align-self:center;padding:6px 14px;border-radius:20px;background:var(--yel);color:var(--yon);font-size:13px;font-weight:700}.chips{display:flex;gap:8px;overflow-x:auto}.chips button{flex:none;padding:8px 14px;border-radius:30px;border:1px solid var(--line);background:var(--card);font-size:13px}.cf{display:flex;gap:8px}.cf input{border-radius:30px}
+.rw{display:flex;gap:8px}.x{border:0;background:none;color:var(--mut);font-size:20px}.cr svg{width:140px;height:140px;transform:rotate(-90deg)}.cr circle{fill:none;stroke-width:8}.cr .tr{stroke:var(--line)}.cr .pr{stroke:var(--brand);stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1s linear}.cr{display:flex;align-items:center;gap:20px}.cr b{font:800 32px "Bricolage Grotesque",sans-serif}
+@media(max-width:760px){#shell{flex-direction:column-reverse}.sd{width:auto;flex-direction:row;border-right:0;border-top:1px solid var(--line);padding:6px}#sn{flex-direction:row;margin:0;flex:1;justify-content:space-around}#sn span,.sdf,.sd .logo{display:none}#astage .jstage{height:170px}}@media(max-width:520px){.nr .ghost{display:none}}
+section.cta{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:24px;text-align:left;padding:64px 56px;color:#fff;border:1px solid #ffffff22;background:radial-gradient(60% 80% at 100% 0,#FFD23F55,transparent 60%),radial-gradient(50% 70% at 0 100%,#3FD8CF44,transparent 65%),linear-gradient(135deg,#0B8A86,#064E4C 70%,#053836)}
+section.cta::before{top:0;left:0;width:100%;height:100%;border:0;border-radius:0;opacity:.35;background:radial-gradient(#ffffff40 1px,transparent 1.5px) 0 0/28px 28px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 75%);mask-image:linear-gradient(90deg,#000,transparent 75%)}section.cta::after{display:none}
+.cta h2{margin:14px 0;max-width:12em}.cta p{margin:0 0 26px;max-width:28em;opacity:.88}.cta .eyebrow{display:inline-block;padding:6px 14px;border-radius:30px;background:#ffffff1f;border:1px solid #ffffff33;font-size:13px;font-weight:600}.cta .btn.ghost{background:#ffffff1a;color:#fff;border-color:#ffffff40}
+.cts{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;margin:24px 0 0;padding:0;font-size:14px}.cts li::before{content:"✓ ";color:#FFD23F;font-weight:700}
+.cto{display:grid;place-items:center;position:relative;min-height:240px}.cto::before,.cto::after{content:"";position:absolute;inset:6%;border:1px dashed #ffffff44;border-radius:50%}.cto::after{inset:22%;border:1px solid #ffffff22}
+.cb{position:relative;z-index:1;width:min(180px,50vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFE066,#FFC41F 60%,#E6A800);box-shadow:0 30px 60px -20px #0008;animation:float 5s ease-in-out infinite}
+.cb i{position:absolute;top:36%;width:11%;height:21%;border-radius:40%;background:#000;animation:blink 5.5s infinite}.cb i:nth-child(1){left:31%}.cb i:nth-child(2){right:31%}.cb b{position:absolute;top:62%;width:15%;height:9%;border-radius:50%;background:#FF6F7D;opacity:.7}.cb b:nth-of-type(1){left:15%}.cb b:nth-of-type(2){right:15%}
+:root[data-theme=dark] section.cta{border-color:var(--line);background:radial-gradient(60% 80% at 100% 0,#FFD23F33,transparent 60%),#0c0c0c}
+@media(max-width:900px){section.cta{grid-template-columns:1fr;padding:44px 24px;text-align:center}.cta h2,.cta p{margin-inline:auto}.cta .acts,.cts{justify-content:center}.cto{order:-1;min-height:200px}}
+section.bru{--sh:#000;margin-top:84px;border:4px solid #000;box-shadow:12px 12px 0 var(--sh);background:#FFD23F;color:#000;overflow:hidden}:root[data-theme=dark] section.bru{--sh:#F5F5F5}
+.bm{background:#000;color:#FFD23F;overflow:hidden;white-space:nowrap;font:800 18px "Bricolage Grotesque",sans-serif;letter-spacing:.06em;padding:10px 0;border-bottom:4px solid #000}.bm2{border:0;border-top:4px solid #000;background:#0B8A86;color:#fff}.bt{display:flex;width:max-content;animation:marq 24s linear infinite}.bt.rv{animation-direction:reverse}
+.bb{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;padding:48px 40px;background:linear-gradient(100deg,#FFD23F 0 64%,#19C3BD 64% 100%)}
+.bru h2{font-size:clamp(34px,6vw,70px);line-height:.95;font-weight:800;text-transform:uppercase;letter-spacing:-.04em;margin:16px 0}.bru mark{background:#000;color:#FFD23F;padding:0 .1em}.bru mark.k{display:inline-block;background:#fff;color:#000;border:3px solid #000;box-shadow:5px 5px 0 #000;transform:rotate(-2deg)}
+.bs{display:inline-block;background:#000;color:#fff;padding:6px 12px;font:700 13px Figtree,sans-serif;letter-spacing:.08em}.bru p{margin:0 0 26px;font-size:18px;font-weight:600;color:#000;max-width:26em}
+.bn{display:inline-flex;padding:15px 24px;background:#000;color:#FFD23F;font:800 16px Figtree,sans-serif;text-transform:uppercase;border:3px solid #000;box-shadow:6px 6px 0 #fff;transition:transform .15s,box-shadow .15s}.bn.w{background:#fff;color:#000;box-shadow:6px 6px 0 #000}.bn:hover{transform:translate(4px,4px);box-shadow:2px 2px 0 #000}
+.br{position:relative;display:grid;place-items:center;min-height:300px}.bo{position:relative;width:min(210px,56vw);aspect-ratio:1;border-radius:50%;background:#FFC41F;border:4px solid #000;box-shadow:10px 10px 0 #000;animation:float 5s ease-in-out infinite}
+.bo i{position:absolute;top:34%;width:11%;height:21%;border-radius:40%;background:#000;animation:blink 5.5s infinite}.bo i:nth-child(1){left:30%}.bo i:nth-child(2){right:30%}.bo b{position:absolute;top:60%;width:15%;height:9%;border-radius:50%;background:#FF6F7D}.bo b:nth-of-type(1){left:14%}.bo b:nth-of-type(2){right:14%}
+.br span{position:absolute;border:3px solid #000;padding:6px 12px;font:800 13px Figtree,sans-serif;white-space:nowrap;box-shadow:4px 4px 0 #000}.st1{top:4%;right:0;background:#fff;transform:rotate(8deg)}.st2{bottom:4%;left:0;background:#000;color:#FFD23F;transform:rotate(-6deg)}
+@media(max-width:900px){.bb{grid-template-columns:1fr;padding:34px 20px;background:linear-gradient(180deg,#19C3BD 0 36%,#FFD23F 36%)}.br{order:-1;min-height:250px}}
+section.ap{--px:50%;--py:30%;position:relative;overflow:hidden;margin-top:84px;border-radius:40px;text-align:center;padding:76px 24px 0;color:var(--ink);border:1px solid var(--line);background:radial-gradient(60% 55% at 12% 0,#19c3bd55,transparent 70%),radial-gradient(55% 50% at 92% 8%,#FFD23F66,transparent 70%),radial-gradient(70% 60% at 50% 100%,#CFF2EF,transparent 70%),var(--card)}
+:root[data-theme=dark] section.ap{background:radial-gradient(60% 55% at 12% 0,#ffffff12,transparent 70%),radial-gradient(55% 50% at 92% 8%,#FFD23F2e,transparent 70%),#0a0a0a}
+section.ap::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--px) var(--py),#ffffffa0,transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}.ap:hover::before{opacity:.7}:root[data-theme=dark] .ap::before{background:radial-gradient(420px circle at var(--px) var(--py),#ffffff14,transparent 60%)}
+.ak{margin:0 0 14px;font-size:15px;font-weight:600;color:var(--mut)}.ap h2{font-size:clamp(36px,6.4vw,76px);line-height:1.03;font-weight:800;letter-spacing:-.05em}.ap h2 span{background:linear-gradient(90deg,var(--brand),#FFB703 85%);-webkit-background-clip:text;background-clip:text;color:transparent}.as{max-width:32em;margin:18px auto 30px;font-size:19px;color:var(--mut)}
+.aa{display:flex;gap:26px;justify-content:center;align-items:center;flex-wrap:wrap}.ab{display:inline-flex;padding:15px 30px;border-radius:40px;background:var(--ink);color:var(--bg);font-weight:600;box-shadow:0 12px 30px -14px #0007;transition:transform .2s ease-out}.al{font-weight:500;color:var(--brand)}.al span{display:inline-block;transition:transform .2s}.al:hover span{transform:translateX(4px)}
+.ac>*,.ag{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}.ap.in .ac>*,.ap.in .ag{opacity:1;transform:none}.ap.in .ac>:nth-child(2){transition-delay:.08s}.ap.in .ac>:nth-child(3){transition-delay:.16s}.ap.in .ac>:nth-child(4){transition-delay:.24s}.ap.in .ag{transition-delay:.3s}
+.ag{position:relative;height:290px;margin-top:34px;display:flex;justify-content:center;align-items:flex-end;perspective:900px}.af{animation:float 5s ease-in-out infinite;margin-bottom:-110px}
+.ao{position:relative;width:min(300px,66vw);aspect-ratio:1;border-radius:50%;cursor:pointer;background:radial-gradient(circle at 35% 28%,#FFE27A,#FFC41F 55%,#E3A400);box-shadow:inset -18px -26px 50px #b8860b66,0 40px 90px -30px #E3A400aa;transition:transform .25s ease-out;transform-style:preserve-3d}.ae{position:absolute;inset:0;transition:transform .2s ease-out}
+.ae i{position:absolute;top:30%;width:9%;height:19%;border-radius:40%;background:#000;animation:blink 5.5s infinite}.ae i:nth-child(1){left:31%}.ae i:nth-child(2){right:31%}.ao b{position:absolute;top:53%;width:14%;height:8%;border-radius:50%;background:#FF6F7D;opacity:0;transition:opacity .3s}.ao b:nth-of-type(1){left:17%}.ao b:nth-of-type(2){right:17%}.ao:hover b,.ap.smile .ao b{opacity:.8}.ap.smile .ae i{animation:none;transform:scaleY(.3)}
+.gl{position:absolute;display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:18px;background:#ffffffb0;color:var(--ink);border:1px solid #ffffffd0;-webkit-backdrop-filter:blur(18px) saturate(1.6);backdrop-filter:blur(18px) saturate(1.6);font-size:14px;font-weight:500;box-shadow:0 20px 40px -22px #0b7a7566;animation:float 6s ease-in-out infinite}.gl .i{color:var(--brand);font-size:18px}:root[data-theme=dark] .gl{background:#161616cc;border-color:#ffffff1f}.g1{left:8%;top:14%}.g2{right:7%;top:4%;animation-delay:-2s}.g3{left:20%;bottom:34%;animation-delay:-4s}
+@media(max-width:700px){.g3{display:none}.g1{left:3%;top:6%}.g2{right:3%;top:30%}}@media(max-width:520px){section.ap{padding-top:56px;border-radius:32px}.as{font-size:17px}}
+.sw{flex-direction:row;gap:0;font-weight:400}.sw input{width:auto;padding:0;border:0}
 </style>
 </head>
 <body>
@@ -180,7 +225,7 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
 <header class="nav">
 <a class="logo" href="#top"><span class="mark"><svg class="i" width="18" height="18"><use href="#spark"/></svg></span>highto</a>
 <nav class="links" aria-label="Main"><a href="#does">What it does</a><a href="#features">Categories</a><a href="#jordan">JORDAN</a><a href="#how">How it works</a><a href="#integrations">Integrations</a></nav>
-<div class="nr"><button class="tg" id="tg" aria-label="Switch light or dark theme"></button><a class="btn sm" href="./auth.html#signup">Get started</a></div>
+<div class="nr"><button class="tg" id="tg" aria-label="Switch light or dark theme"></button><a class="btn ghost sm" href="#login">Log in</a><a class="btn sm" href="#login">Get started</a></div>
 </header>
 
 <main id="top">
@@ -205,33 +250,13 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
 <div class="app"><div class="bar"><i></i><i></i><i></i><span>Highto</span></div>
 <div class="body"><div class="side" role="tablist" aria-label="Categories" id="side"></div><div class="pane" id="pane" role="tabpanel"></div></div></div>
 </section>
-<section class="dark" id="jordan">
-<div class="jstage" id="orb"><canvas id="gl3d" aria-label="JORDAN walking around in 3D"></canvas><div class="fb"><svg id="bot" viewBox="0 0 320 300" overflow="visible">
-<defs>
-<radialGradient id="hd" cx=".3" cy=".18" r=".9"><stop offset="0" stop-color="#8b9693"/><stop offset=".5" stop-color="#55605e"/><stop offset="1" stop-color="#303836"/></radialGradient>
-<linearGradient id="bd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a5452"/><stop offset="1" stop-color="#262d2b"/></linearGradient>
-<linearGradient id="vz" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b2f31"/><stop offset=".5" stop-color="#0c0e0f"/><stop offset="1" stop-color="#000"/></linearGradient>
-<linearGradient id="sd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".38"/></linearGradient>
-<filter id="gl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<ellipse cx="160" cy="288" rx="92" ry="9" fill="#000" opacity=".3"/>
-<g class="fl">
-<rect x="112" y="214" width="96" height="64" rx="30" fill="url(#bd)"/>
-<rect x="116" y="262" width="38" height="22" rx="11" fill="#2a312f"/><rect x="166" y="262" width="38" height="22" rx="11" fill="#2a312f"/>
-<circle cx="102" cy="238" r="15" fill="url(#bd)"/>
-<g class="arm"><circle cx="218" cy="238" r="15" fill="url(#bd)"/></g>
-<rect x="14" y="98" width="42" height="74" rx="18" fill="url(#hd)"/><rect x="22" y="110" width="22" height="50" rx="10" fill="#fff" opacity=".07"/>
-<rect x="30" y="28" width="260" height="198" rx="92" fill="url(#hd)"/>
-<rect x="30" y="28" width="260" height="198" rx="92" fill="url(#sd)"/>
-<ellipse cx="108" cy="52" rx="52" ry="11" fill="#fff" opacity=".22" transform="rotate(-12 108 52)"/>
-<g id="face"><rect x="54" y="58" width="212" height="134" rx="64" fill="url(#vz)"/>
-<path d="M82 76q78-24 158 0" stroke="#fff" stroke-opacity=".12" stroke-width="7" fill="none" stroke-linecap="round"/>
-<g id="eyes"><rect class="eye" x="112" y="102" width="40" height="46" rx="16" fill="#fff" filter="url(#gl)"/><rect class="eye" x="170" y="102" width="40" height="46" rx="16" fill="#fff" filter="url(#gl)"/></g></g>
-</g></svg></div><span class="hint">Drag to turn the view. Tap the floor to call JORDAN.</span></div>
-<div>
+<section class="sec jsec" id="jordan">
 <h2>Meet JORDAN, your guide through all of it.</h2>
-<p>One calm assistant across every category. Ask about your sleep, your walk home or your family, and JORDAN answers in plain language. Pick a moment to try it.</p>
-<div class="tabs" role="group" aria-label="Conversation topics"><button class="tab" data-k="health" aria-pressed="true">Sleep</button><button class="tab" data-k="safety" aria-pressed="false">Walking home</button><button class="tab" data-k="home" aria-pressed="false">Bedtime</button><button class="tab" data-k="family" aria-pressed="false">Family</button></div></div>
+<p class="lead">One calm assistant across every category. Pick a moment to hear him. He watches wherever you move, and a tap makes him smile.</p>
+<div class="jstage" id="orb"><canvas id="gl3d" aria-label="JORDAN floating in 3D"></canvas><div class="fb"><svg id="bot" viewBox="0 0 220 260" aria-label="JORDAN"><defs><radialGradient id="ob" cx=".35" cy=".28" r=".9"><stop offset="0" stop-color="#FFCB2E"/><stop offset=".5" stop-color="#FFC41F"/><stop offset="1" stop-color="#EBAA00"/></radialGradient></defs>
+<ellipse cx="110" cy="244" rx="48" ry="7" fill="#000" opacity=".22"/><g class="fl"><circle cx="110" cy="112" r="92" fill="url(#ob)"/>
+<g id="face"><g id="eyes"><rect class="eye" x="80" y="94" width="22" height="42" rx="11" fill="#000"/><rect class="eye" x="118" y="94" width="22" height="42" rx="11" fill="#000"/></g></g></g></svg></div></div>
+<div class="tabs" role="group" aria-label="Conversation topics"><button class="tab" data-k="health" aria-pressed="true">Sleep</button><button class="tab" data-k="safety" aria-pressed="false">Walking home</button><button class="tab" data-k="home" aria-pressed="false">Bedtime</button><button class="tab" data-k="family" aria-pressed="false">Family</button></div>
 <div class="chat" id="chat" aria-live="polite"></div>
 </section>
 <section class="sec" id="how">
@@ -262,10 +287,19 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
 
 <section class="sec" id="privacy"><h2>Your life, on your terms.</h2><p class="lead">Choose what you add, what you connect and what you share.</p>
 <div class="pv"><div class="row"><span class="ic m"><svg class="i"><use href="#lock"/></svg></span><div><b>Visible permissions</b><small>See exactly what you’ve connected, at any time.</small></div></div><div class="row"><span class="ic l"><svg class="i"><use href="#users"/></svg></span><div><b>People you choose</b><small>Keep trusted contacts and sharing intentional.</small></div></div><div class="row"><span class="ic p"><svg class="i"><use href="#shield"/></svg></span><div><b>Pause anytime</b><small>Turn off a connection whenever you like.</small></div></div><div class="row"><span class="ic s"><svg class="i"><use href="#home"/></svg></span><div><b>One clear place</b><small>Everything organised, without the clutter.</small></div></div></div></section>
-<section class="cta"><h2>A little more clarity. A lot more peace of mind.</h2><p>Welcome to Highto.</p><a class="btn" href="#features">Discover Highto</a></section>
+<section class="ap" id="start"><div class="ac"><p class="ak">Welcome to Highto</p><h2>A little more clarity.<br><span>A lot more peace of mind.</span></h2><p class="as">Health, safety, family and home, together in one calm place, with JORDAN to guide you.</p><div class="aa"><a class="ab" href="#login">Get started</a><a class="al" href="#how">See how it works <span>›</span></a></div></div><div class="ag" aria-hidden="true"><span class="gl g1"><svg class="i"><use href="#ck"/></svg>Dose taken · 8:00 pm</span><span class="gl g2"><svg class="i"><use href="#users"/></svg>Maya got home · 6:42 pm</span><span class="gl g3"><svg class="i"><use href="#shield"/></svg>Check-in · All clear</span><div class="af"><div class="ao"><div class="ae"><i></i><i></i></div><b></b><b></b></div></div></div></section>
 </main>
 <footer><strong>highto</strong><span>Concept preview. Live AI, integrations and device controls aren’t connected.</span></footer>
 </div>
+<main id="login"><div class="lc"><a class="logo" href="#top"><span class="mark"><svg class="i"><use href="#spark"/></svg></span>highto</a><h1 id="lt">Welcome back</h1><p>Log in to chat with JORDAN.</p><div class="seg"><button id="m1" aria-pressed="true">Log in</button><button id="m2" aria-pressed="false">Create account</button></div>
+<form id="lf" novalidate><label id="nl" hidden>Name<input id="ln" autocomplete="name"></label><label>Email<input id="le" type="email" autocomplete="email"></label><label>Password<input id="lp" type="password" autocomplete="current-password"></label><span id="lerr" role="alert"></span><button class="btn" id="lsub" type="submit">Log in</button></form><a class="note" href="#top">← Back to home</a><p class="note">Concept preview: accounts stay on this device only.</p></div></main>
+<div id="shell"><aside class="sd"><a class="logo" href="#chat"><span class="mark"><svg class="i"><use href="#spark"/></svg></span>highto</a><nav id="sn"><a href="#chat"><svg class="i"><use href="#spark"/></svg><span>Chat</span></a><a href="#reminders"><svg class="i"><use href="#watch"/></svg><span>Reminders</span></a><a href="#checkin"><svg class="i"><use href="#shield"/></svg><span>Check-in</span></a><a href="#home"><svg class="i"><use href="#home"/></svg><span>Home</span></a><a href="#settings"><svg class="i"><use href="#lock"/></svg><span>Settings</span></a></nav><div class="sdf"><button class="tg" id="tg2" aria-label="Switch theme"></button><button class="btn ghost sm" id="lo">Log out</button></div></aside><section id="vw">
+<div class="pg" id="p-chat"><div id="astage"></div><div id="sy" hidden></div><div id="msgs" aria-live="polite"></div><div class="chips" id="chips"></div><form class="cf" id="cf"><input id="ci" placeholder="Message JORDAN…" autocomplete="off" aria-label="Message JORDAN"><button class="btn" type="submit">Send</button></form></div>
+<div class="pg" id="p-reminders" hidden><h2>Reminders</h2><p>Add one here, or just tell JORDAN.</p><div id="rl" style="display:flex;flex-direction:column;gap:10px"></div><form class="rw" id="rf"><input id="rt" placeholder="Remind me to…" aria-label="Reminder"><input id="rm" type="time" aria-label="Time" style="width:130px"><button class="btn sm" type="submit">Add</button></form></div>
+<div class="pg" id="p-checkin" hidden><h2>Safety check-in</h2><p>If you don’t reply when the timer ends, JORDAN alerts your trusted contacts.</p><div class="cr"><svg viewBox="0 0 60 60"><circle class="tr" cx="30" cy="30" r="24"/><circle class="pr" id="cr" pathLength="1" cx="30" cy="30" r="24"/></svg><div><b id="ctime">No active check-in</b><div class="rw" style="margin-top:10px"><button class="btn sm" data-ci="15">15 min</button><button class="btn ghost sm" data-ci="0">I’m safe</button></div></div></div><div class="row"><span class="ic p"><svg class="i"><use href="#users"/></svg></span><div><b>Trusted contacts</b><small>Maya, Dad</small></div><span class="st" style="--t:var(--peach);--c:var(--pi)">Ready</span></div></div>
+<div class="pg" id="p-home" hidden><h2>Home</h2><p>Controls are simulated in this preview.</p><div class="row"><div><label class="sw" style="font-size:15px">Front door locked<input type="checkbox" id="hd"><i></i></label><label class="sw" style="font-size:15px">Lights on<input type="checkbox" id="hl"><i></i></label></div></div><div class="row"><div><b>Thermostat</b><small id="ht"></small></div><button class="btn ghost sm" data-t="-1">−</button><button class="btn ghost sm" data-t="1">+</button></div></div>
+<div class="pg" id="p-settings" hidden><h2>Settings</h2><label>Your name<input id="sname"></label><div class="rw"><button class="btn sm" id="ssave">Save name</button><button class="btn ghost sm" id="tg3">Switch theme</button><button class="btn ghost sm" id="sclr">Clear chat</button><button class="btn ghost sm" id="lo2">Log out</button></div></div>
+</section></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const $=s=>document.querySelector(s),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -294,10 +328,10 @@ $('#caps').innerHTML=V.map((v,i)=>`<div class="cap" style="--t:var(--${TC[v[0]][
 const bp=$('#bpm');setInterval(()=>bp.textContent=58+Math.floor(Math.random()*15),1400);
 const sws=[...document.querySelectorAll('.d5 input')];let si=0;setInterval(()=>{sws[si%3].checked=!sws[si%3].checked;si++},900);
 // theme toggle
-const rt=document.documentElement,tg=$('#tg'),dk=matchMedia('(prefers-color-scheme:dark)'),isD=()=>rt.dataset.theme?rt.dataset.theme==='dark':dk.matches;
-const setT=(t,save)=>{rt.dataset.theme=t;tg.innerHTML=ico(t==='dark'?'sun':'moon');$('meta[name=theme-color]').content=t==='dark'?'#04292B':'#FFFFFF';if(save)try{localStorage.setItem('hl-theme',t)}catch(e){}};
+const rt=document.documentElement,tg=$('#tg'),dk=matchMedia('(prefers-color-scheme:dark)'),isD=()=>rt.dataset.theme==='dark';
+const setT=(t,save)=>{rt.dataset.theme=t;document.querySelectorAll('.tg').forEach(b=>b.innerHTML=ico(t==='dark'?'sun':'moon'));$('meta[name=theme-color]').content=t==='dark'?'#000000':'#FFFFFF';if(save)try{localStorage.setItem('hl-theme',t)}catch(e){}};
 let sv=null;try{sv=localStorage.getItem('hl-theme')}catch(e){}
-sv?setT(sv):tg.innerHTML=ico(isD()?'sun':'moon');tg.onclick=()=>setT(isD()?'light':'dark',1);
+setT(sv==='dark'?'dark':'light');tg.onclick=()=>setT(isD()?'light':'dark',1);
 // JORDAN orb
 const orb=$('#orb'),eyes=$('#eyes'),face=$('#face'),look=(x,y)=>{eyes.style.transform=`translate(${x*9}px,${y*6}px)`;face.style.transform=`translate(${x*5}px,${y*3}px)`};let idl=0;addEventListener('pointermove',e=>{const r=orb.getBoundingClientRect();look(clamp((e.clientX-r.left-r.width/2)/(innerWidth/2),-1,1),clamp((e.clientY-r.top-r.height/2)/(innerHeight/2),-1,1));idl=Date.now()});setInterval(()=>{if(Date.now()-idl>2500)look(Math.random()*2-1,Math.random()-.5)},1800);
 let pt;const wake=()=>{orb.classList.add('pop');clearTimeout(pt);pt=setTimeout(()=>orb.classList.remove('pop'),950)};
@@ -313,63 +347,122 @@ setTimeout(()=>{if(t!==tok)return;const x=chat.querySelector('.dots');if(x)x.rem
 setTimeout(()=>{if(t===tok)orb.classList.remove('talk')},d)}
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-pressed',x===b));play(b.dataset.k)}));
 let started=false;new IntersectionObserver((e,o)=>{if(e[0].isIntersecting&&!started){started=true;play('health');o.disconnect()}},{threshold:.25}).observe($('#jordan'));
-// JORDAN in 3D: walks like a toddler, drag to turn the view, tap the floor to call him
+// JORDAN in 3D: a glossy golden orb that hovers, faces you and watches you. Tap him to make him smile.
 (function(){const stage=$('#orb'),cv=$('#gl3d');if(!window.THREE||!cv)return;
 const T=window.THREE;let R;try{R=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){return}
-const V3=(x,y,z)=>new T.Vector3(x,y,z),lerp=(a,b,t)=>a+(b-a)*t,RM=matchMedia('(prefers-reduced-motion:reduce)').matches,scene=new T.Scene(),cam=new T.PerspectiveCamera(32,1,.1,60);
-R.setPixelRatio(Math.min(devicePixelRatio,2));R.shadowMap.enabled=true;R.shadowMap.type=T.PCFSoftShadowMap;
-scene.add(new T.HemisphereLight(0xdff7ff,0x1a2a30,.95));
-const sun=new T.DirectionalLight(0xffffff,.95);sun.position.set(3,7,5);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);Object.assign(sun.shadow.camera,{left:-5,right:5,top:5,bottom:-5,near:1,far:20});sun.shadow.camera.updateProjectionMatrix();sun.shadow.radius=4;scene.add(sun);
-const rim=new T.DirectionalLight(0x6fe8df,.8);rim.position.set(-5,3,-4);scene.add(rim);const fill=new T.PointLight(0xffe08a,.5,24);fill.position.set(-4,3,5);scene.add(fill);
-const floor=new T.Mesh(new T.PlaneGeometry(30,30),new T.ShadowMaterial({opacity:.4}));floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;scene.add(floor);
-// rounded box with exact normals, so edges stay smooth
-function RB(w,h,d,r,m,sg=20){const g=new T.BoxGeometry(w,h,d,sg,sg,sg),p=g.attributes.position,n=g.attributes.normal,a=w/2-r,b=h/2-r,c=d/2-r,cl=(v,k)=>Math.max(-k,Math.min(k,v));
-for(let i=0;i<p.count;i++){const x=p.getX(i),y=p.getY(i),z=p.getZ(i),cx=cl(x,a),cy=cl(y,b),cz=cl(z,c);let nx=x-cx,ny=y-cy,nz=z-cz;const l=Math.hypot(nx,ny,nz)||1;nx/=l;ny/=l;nz/=l;p.setXYZ(i,cx+nx*r,cy+ny*r,cz+nz*r);n.setXYZ(i,nx,ny,nz)}
-const o=new T.Mesh(g,m);o.castShadow=true;return o}
-const shell=new T.MeshStandardMaterial({color:0x58646f,roughness:.5,metalness:.02}),dark=new T.MeshStandardMaterial({color:0x3b4752,roughness:.6}),btn=new T.MeshStandardMaterial({color:0x3a4249,roughness:.55}),
-glass=new T.MeshPhysicalMaterial({color:0x414446,roughness:.12,metalness:.1,clearcoat:1,clearcoatRoughness:.04}),white=new T.MeshBasicMaterial({color:0xeef2f7});
-const root=new T.Group(),rig=new T.Group();root.add(rig);scene.add(root);
-const add=(o,x,y,z,pa)=>{o.position.set(x,y,z);(pa||rig).add(o);return o};
-add(RB(.76,.72,.64,.27,dark),0,.56,0);
-const fL=add(RB(.36,.3,.52,.13,dark,12),-.2,.15,.04),fR=add(RB(.36,.3,.52,.13,dark,12),.2,.15,.04);
-const arm=sx=>{const g=new T.Group();g.position.set(sx*.42,.8,.02);const b=RB(.34,.22,.22,.1,dark,10);b.position.x=sx*.15;g.add(b);rig.add(g);return g},aL=arm(-1),aR=arm(1);
-const head=new T.Group();head.position.set(0,1.66,0);rig.add(head);
-add(RB(1.96,1.72,1.5,.56,shell,24),0,0,-.3,head);
-add(RB(2,1.76,1,.42,shell,24),0,0,.55,head);
-add(RB(.26,.66,.56,.1,btn,12),-1.08,-.05,0,head);
-add(RB(1.7,1.3,.62,.3,glass,20),0,.02,.8,head);
-const eyes=new T.Group();eyes.position.set(0,-.1,1.03);head.add(eyes);[-.23,.23].forEach(x=>{const e=RB(.34,.4,.2,.1,white,8);e.castShadow=false;e.position.x=x;eyes.add(e)});
-// cactus and pebbles, like the reference
-const gm=new T.MeshStandardMaterial({color:0x4cc36b,roughness:.6}),cg=new T.Group(),c1=new T.Mesh(new T.CylinderGeometry(.13,.13,.5,16),gm),c2=new T.Mesh(new T.SphereGeometry(.13,16,12),gm);c1.position.y=.25;c2.position.y=.5;c1.castShadow=c2.castShadow=true;cg.add(c1,c2);cg.position.set(2.7,0,-.7);scene.add(cg);
-[[2.3,-.3,.1],[2.5,.1,.07]].forEach(([x,z,r])=>{const k=new T.Mesh(new T.SphereGeometry(r,12,10),new T.MeshStandardMaterial({color:0xdfe6e6,roughness:.8}));k.scale.y=.6;k.position.set(x,r*.5,z);k.castShadow=true;scene.add(k)});
-// state
-const S={x:0,z:0,h:0,tx:0,tz:0,mode:'idle',it:1.2,ph:0,wa:0,t:0,hop:0,bl:2,bk:0},P={x:0,y:0};let wr=2.6,dist=8,th=.45,ph=1.28;
-const wrap=a=>((a+Math.PI*3)%(Math.PI*2))-Math.PI;
-function pick(){const a=Math.random()*6.283,r=1+Math.random()*(wr-1);S.tx=Math.sin(a)*r;S.tz=Math.cos(a)*r;S.mode='walk'}
-function size(){const w=stage.clientWidth,h=stage.clientHeight;R.setSize(w,h,false);const asp=w/h;cam.aspect=asp;cam.updateProjectionMatrix();wr=clamp(asp*1.3-.3,1.2,2.7);dist=asp<1.5?8+(1.5-asp)*3.5:8}
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,scene=new T.Scene(),cam=new T.PerspectiveCamera(32,1,.1,60),cc=h=>new T.Color(h).convertSRGBToLinear();
+R.setPixelRatio(Math.min(devicePixelRatio,2));R.outputEncoding=T.sRGBEncoding;R.toneMapping=T.ACESFilmicToneMapping;R.toneMappingExposure=1.1;
+const mkTex=(w,h,fn)=>{const c=document.createElement('canvas');c.width=w;c.height=h;fn(c.getContext('2d'));return new T.CanvasTexture(c)};
+const env=mkTex(512,256,x=>{const g=x.createLinearGradient(0,0,0,256);g.addColorStop(0,'#fff');g.addColorStop(.5,'#d6dfe2');g.addColorStop(.52,'#8fa0a6');g.addColorStop(1,'#4c5b60');x.fillStyle=g;x.fillRect(0,0,512,256);x.fillStyle='#fff';x.fillRect(60,40,120,26);x.fillRect(300,30,90,40);x.fillRect(220,90,50,14)});
+env.mapping=T.EquirectangularReflectionMapping;const pm=new T.PMREMGenerator(R);scene.environment=pm.fromEquirectangular(env).texture;pm.dispose();
+scene.add(new T.HemisphereLight(0xffffff,0x9fb0b4,.4));const sun=new T.DirectionalLight(0xffffff,1.1);sun.position.set(2,6,6);scene.add(sun);const rim=new T.DirectionalLight(0xffffff,.5);rim.position.set(-5,3,-3);scene.add(rim);
+const shT=mkTex(64,64,x=>{const g=x.createRadialGradient(32,32,2,32,32,32);g.addColorStop(0,'rgba(0,30,30,.6)');g.addColorStop(1,'rgba(0,30,30,0)');x.fillStyle=g;x.fillRect(0,0,64,64)});
+const blob=new T.Mesh(new T.PlaneGeometry(2.6,2.6),new T.MeshBasicMaterial({map:shT,transparent:true,depthWrite:false,toneMapped:false}));blob.rotation.x=-Math.PI/2;blob.position.y=.01;scene.add(blob);
+function RB(w,h,d,r,m,sg=10){const g=new T.BoxGeometry(w,h,d,sg,sg,sg),p=g.attributes.position,n=g.attributes.normal,a=w/2-r,b=h/2-r,c=d/2-r,cl=(v,k)=>Math.max(-k,Math.min(k,v));
+for(let i=0;i<p.count;i++){const x=p.getX(i),y=p.getY(i),z=p.getZ(i),cx=cl(x,a),cy=cl(y,b),cz=cl(z,c);let nx=x-cx,ny=y-cy,nz=z-cz;const l=Math.hypot(nx,ny,nz)||1;nx/=l;ny/=l;nz/=l;p.setXYZ(i,cx+nx*r,cy+ny*r,cz+nz*r);n.setXYZ(i,nx,ny,nz)}return new T.Mesh(g,m)}
+const root=new T.Group();scene.add(root);
+root.add(new T.Mesh(new T.SphereGeometry(1,64,48),new T.MeshStandardMaterial({color:cc(0xFFC41F),roughness:1,metalness:0,envMapIntensity:.2})));
+const look=new T.Group();look.rotation.order='YXZ';root.add(look);const ink=new T.MeshBasicMaterial({color:0,toneMapped:false,side:T.DoubleSide,polygonOffset:true,polygonOffsetFactor:-2}),eyes=[],arcs=[];
+const rr=(w,h,r)=>{const p=new T.Shape(),x=-w/2,y=-h/2;p.moveTo(x+r,y);p.lineTo(x+w-r,y);p.quadraticCurveTo(x+w,y,x+w,y+r);p.lineTo(x+w,y+h-r);p.quadraticCurveTo(x+w,y+h,x+w-r,y+h);p.lineTo(x+r,y+h);p.quadraticCurveTo(x,y+h,x,y+h-r);p.lineTo(x,y+r);p.quadraticCurveTo(x,y,x+r,y);return new T.ShapeGeometry(p,8)};
+[-1,1].forEach(sx=>{const g=new T.Group();g.rotation.y=sx*.22;look.add(g);const e=new T.Mesh(rr(.2,.4,.1),ink);e.position.z=1.01;g.add(e);eyes.push(e);const a=new T.Mesh(new T.RingGeometry(.09,.16,24,1,Math.PI*.12,Math.PI*.76),ink);a.position.set(0,-.04,1.01);a.visible=false;g.add(a);arcs.push(a)});
+const bm=new T.MeshBasicMaterial({color:0xFF6F7D,transparent:true,opacity:0,toneMapped:false,depthWrite:false});[-1,1].forEach(sx=>{const b=new T.Mesh(new T.CircleGeometry(.13,24),bm);b.scale.set(1.4,.8,1);b.position.set(sx*.42,-.2,.9);b.rotation.y=sx*.43;look.add(b)});
+const MO={idle:{sy:1,sx:1,q:1,t:0,h:0,b:0},listen:{sy:1.2,sx:1,q:1,t:0,h:0,b:0},think:{sy:.85,sx:1,q:.7,t:-.12,h:0,b:0,fx:-.7,fy:.8},happy:{sy:1,sx:1,q:1,t:0,h:1,b:1},sad:{sy:.9,sx:1,q:1,t:.35,h:0,b:0}},K=['sy','sx','q','t','h','b'],cur={...MO.idle},MC={};let tt={...MO.idle};
+window.jordanMood=n=>{const o=MO[n]||MO.idle;tt={...MO.idle,...o};MC.fx=o.fx;MC.fy=o.fy};
+const S={t:0,hop:0,bl:2,bk:0,lx:0,ly:0,idl:0},P={x:0,y:0};
+function size(){const w=stage.clientWidth,h=stage.clientHeight;R.setSize(w,h,false);const asp=w/h;cam.aspect=asp;cam.updateProjectionMatrix();cam.position.set(0,2,asp<1?7.6:6.8);cam.lookAt(0,1.2,0)}
 new ResizeObserver(size).observe(stage);size();
-function step(dt){S.t+=dt;const talk=stage.classList.contains('talk');if(S.hop>0)S.hop=Math.max(0,S.hop-dt/.75);let walking=false;
-if(S.mode==='walk'&&!talk){const dx=S.tx-S.x,dz=S.tz-S.z,d=Math.hypot(dx,dz);if(d<.1){S.mode='idle';S.it=1.5+Math.random()*2.5}else{const da=wrap(Math.atan2(dx,dz)-S.h);S.h+=da*Math.min(1,dt*5);const sp=.8*Math.max(.15,1-Math.abs(da)/1.2);S.x+=Math.sin(S.h)*sp*dt;S.z+=Math.cos(S.h)*sp*dt;S.ph+=dt*10*sp/.8;walking=true}}
-else{const da=wrap(Math.atan2(cam.position.x-S.x,cam.position.z-S.z)-S.h);S.h+=da*Math.min(1,dt*3);S.it-=dt;if(S.it<=0&&!talk&&!RM)pick()}
-S.h=wrap(S.h);S.wa=lerp(S.wa,walking?1:0,Math.min(1,dt*6));const w=S.wa,s=Math.sin(S.ph),c=Math.cos(S.ph),hh=S.hop>0?Math.sin(Math.PI*(1-S.hop)):0;
-root.position.set(S.x,Math.abs(s)*.07*w+hh*.7+(talk?(Math.sin(S.t*9)*.5+.5)*.03:0),S.z);root.rotation.y=S.h;
-rig.rotation.z=s*.12*w;rig.rotation.x=.06*w;rig.scale.set(1-hh*.03,1+Math.sin(S.t*2)*.012+hh*.06,1);
-fL.position.z=.05+s*.26*w;fL.position.y=.11+Math.max(0,c)*.15*w;fR.position.z=.05-s*.26*w;fR.position.y=.11+Math.max(0,-c)*.15*w;
-aL.rotation.y=-s*.8*w;aR.rotation.y=-s*.8*w;aL.rotation.z=-.15-.45*w-hh*.9;aR.rotation.z=.15+.45*w+hh*.9;
-head.rotation.z=-s*.07*w;head.rotation.x=talk?Math.sin(S.t*9)*.05:0;
-const f=1-w,k=Math.min(1,dt*8);eyes.position.x+=(P.x*.1*f-eyes.position.x)*k;eyes.position.y+=(-.1+P.y*.06*f-eyes.position.y)*k;
-S.bl-=dt;if(S.bl<=0){S.bl=2.5+Math.random()*3;S.bk=.18}if(S.bk>0)S.bk-=dt;const bk=S.bk>0?Math.sin(Math.PI*(1-S.bk/.18)):0,hp=S.hop>0?Math.min(1,S.hop*4):0;eyes.scale.y=Math.max(.08,1-bk*.92-hp*.7)}
-// input: drag turns the view, tap the floor to call JORDAN, tap JORDAN to say hi
-const ray=new T.Raycaster(),m2=new T.Vector2(),pl=new T.Plane(V3(0,1,0),0),hit=V3(0,0,0);let dn=null;
-addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();P.x=clamp((e.clientX-r.left-r.width/2)/(innerWidth/2),-1,1);P.y=clamp(-(e.clientY-r.top-r.height/2)/(innerHeight/2),-1,1)});
-cv.addEventListener('pointerdown',e=>{dn={x:e.clientX,y:e.clientY,th,ph,mv:0};cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing'});
-cv.addEventListener('pointermove',e=>{if(!dn)return;const dx=e.clientX-dn.x,dy=e.clientY-dn.y;dn.mv=Math.max(dn.mv,Math.hypot(dx,dy));if(dn.mv>6){th=dn.th-dx*.008;ph=clamp(dn.ph-dy*.004,.9,1.45)}});
-cv.addEventListener('pointerup',e=>{cv.style.cursor='grab';if(dn&&dn.mv<=6){const r=cv.getBoundingClientRect();m2.set((e.clientX-r.left)/r.width*2-1,-((e.clientY-r.top)/r.height)*2+1);ray.setFromCamera(m2,cam);
-if(ray.intersectObject(root,true).length)S.hop=1;else if(ray.ray.intersectPlane(pl,hit)){const l=Math.hypot(hit.x,hit.z),q=l>wr?wr/l:1;S.tx=hit.x*q;S.tz=hit.z*q;S.mode='walk'}}dn=null});
+function step(dt){S.t+=dt;const talk=stage.classList.contains('talk');if(S.hop>0)S.hop=Math.max(0,S.hop-dt/.8);
+if(!RM&&performance.now()-S.idl>2500&&Math.random()<dt*.6){P.x=Math.random()*1.6-.8;P.y=Math.random()*1.2-.6}
+const k=Math.min(1,dt*6);S.lx+=((MC.fx==null?P.x:MC.fx)-S.lx)*k;S.ly+=((MC.fy==null?P.y:MC.fy)-S.ly)*k;K.forEach(q=>cur[q]+=(tt[q]-cur[q])*k);
+const hh=S.hop>0?Math.sin(Math.PI*(1-S.hop)):0,y=1.4+Math.sin(S.t*1.6)*.08+hh*.5+(talk?Math.sin(S.t*9)*.03:0);
+root.position.set(S.lx*.25,y,0);const sc=1+(talk?Math.sin(S.t*9)*.015:0)+hh*.04;root.scale.set(sc*(1-hh*.03),sc*(1+hh*.04),sc*(1-hh*.03));
+look.rotation.y=S.lx*.55;look.rotation.x=-S.ly*.35;
+S.bl-=dt;if(S.bl<=0){S.bl=2.5+Math.random()*3;S.bk=.18}if(S.bk>0)S.bk-=dt;
+const bk=S.bk>0?Math.sin(Math.PI*(1-S.bk/.18)):0,hp=S.hop>0?Math.min(1,S.hop*3):0,ey=Math.max(.08,1-bk*.92-hp*.6);const hv=cur.h>.5;eyes.forEach((e,i)=>{e.visible=!hv;e.scale.set(cur.sx*(i?1:cur.q),Math.max(.06,cur.sy*ey),1);e.rotation.z=(i?-1:1)*cur.t;arcs[i].visible=hv});bm.opacity=cur.b*.75;
+const hg=y-1.4;blob.position.set(S.lx*.25,.01,0);blob.scale.setScalar(1.4-hg*.4);blob.material.opacity=Math.max(.15,.5-hg*.4)}
+// input: eyes follow your finger or cursor; tap JORDAN and he smiles and hops; tap elsewhere and he glances there
+const ray=new T.Raycaster(),m2=new T.Vector2();
+addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();P.x=clamp((e.clientX-r.left-r.width/2)/(innerWidth/2),-1,1);P.y=clamp(-(e.clientY-r.top-r.height/2)/(innerHeight/2),-1,1);S.idl=performance.now()});
+cv.addEventListener('pointerup',e=>{const r=cv.getBoundingClientRect();m2.set((e.clientX-r.left)/r.width*2-1,-((e.clientY-r.top)/r.height)*2+1);ray.setFromCamera(m2,cam);
+if(ray.intersectObject(root,true).length){S.hop=1;jordanMood('happy');setTimeout(()=>jordanMood('idle'),1500)}else{P.x=clamp((e.clientX-r.left-r.width/2)/(r.width/2),-1,1);P.y=clamp(-(e.clientY-r.top-r.height/2)/(r.height/2),-1,1)}S.idl=performance.now()});
 let vis=false,last=0,raf=0;
-function loop(n){const dt=Math.min(.05,(n-last)/1000);last=n;step(dt);cam.position.set(Math.sin(ph)*Math.sin(th)*dist,1.2+Math.cos(ph)*dist,Math.sin(ph)*Math.cos(th)*dist);cam.lookAt(0,1.2,0);R.render(scene,cam);raf=vis?requestAnimationFrame(loop):0}
+function loop(n){const dt=Math.min(.05,(n-last)/1000);last=n;step(dt);R.render(scene,cam);raf=vis?requestAnimationFrame(loop):0}
 new IntersectionObserver(e=>{vis=e[0].isIntersecting;if(vis&&!raf){last=performance.now();raf=requestAnimationFrame(loop)}}).observe(stage);
 stage.classList.add('ready')})();
+
+window.jordanMood=window.jordanMood||(()=>{});
+const ob=$('#orb'),VW=['chat','reminders','checkin','home','settings'],wait=ms=>new Promise(r=>setTimeout(r,ms)),cap=x=>x[0].toUpperCase()+x.slice(1);
+let U=null,ST={rem:[],home:{door:true,lights:true,temp:20},ci:null},greeted=false,busy=0,mt,ciT,pend=null;
+try{U=JSON.parse(localStorage.getItem('hl-user'));ST={...ST,...JSON.parse(localStorage.getItem('hl-st'))}}catch(e){}
+const sv_=()=>{try{localStorage.setItem('hl-st',JSON.stringify({rem:ST.rem,home:ST.home}))}catch(e){}};
+const msgs=$('#msgs'),ci=$('#ci'),sc=()=>msgs.scrollTop=msgs.scrollHeight,mood=(n,ms)=>{jordanMood(n);clearTimeout(mt);if(ms)mt=setTimeout(()=>jordanMood('idle'),ms)},orbT=o=>ob.classList.toggle('talk',!!o);
+function say(w,t){const m=document.createElement('div');m.className='msg '+w;m.textContent=t;msgs.append(m);sc()}
+async function reply(a,m,hold){busy=1;mood('think');for(let i=0;i<a.length;i++){const x=document.createElement('div');x.className='dots';x.innerHTML='<i></i><i></i><i></i>';msgs.append(x);sc();await wait(600+Math.min(a[i].length*10,600));x.remove();say('j',a[i]);orbT(1);mood(m);await wait(350);orbT(0)}busy=0;mood(m,hold||3200)}
+function dock(a){const to=a?$('#astage'):$('.jsec'),b=a?null:$('.jsec .tabs');if(ob.parentNode!==to)to.insertBefore(ob,b)}
+function route(){const h=location.hash.slice(1);let v=null;body_.className=U?'v-app':h==='login'?'v-login':'v-landing';dock(!!U);if(!U)return;v=VW.includes(h)?h:'chat';document.querySelectorAll('.pg').forEach(p=>p.hidden=p.id!=='p-'+v);document.querySelectorAll('#sn a').forEach(a=>a.setAttribute('aria-current',a.hash==='#'+v));if(v==='chat')greet();rem();home();tick();$('#sname').value=U.name}
+const body_=document.body;addEventListener('hashchange',route);
+function greet(){if(greeted)return;greeted=true;msgs.innerHTML='';const h=new Date().getHours();reply([(h<12?'Good morning':h<18?'Good afternoon':'Good evening')+', '+U.name+'. I’m JORDAN.','I can set reminders, start a safety check-in and control your home. Just tell me in your own words.'],'happy')}
+// auth
+let mode=1;const seg=n=>{mode=n;$('#m1').setAttribute('aria-pressed',n==1);$('#m2').setAttribute('aria-pressed',n==2);$('#nl').hidden=n==1;$('#lsub').textContent=n==1?'Log in':'Create account';$('#lt').textContent=n==1?'Welcome back':'Create your account'};
+$('#m1').onclick=()=>seg(1);$('#m2').onclick=()=>seg(2);
+$('#lf').onsubmit=e=>{e.preventDefault();const em=$('#le').value.trim(),pw=$('#lp').value,nm=$('#ln').value.trim(),er=$('#lerr');
+if(!/^\S+@\S+\.\S+$/.test(em))return er.textContent='Enter a valid email address.';if(pw.length<6)return er.textContent='Password needs at least 6 characters.';if(mode==2&&!nm)return er.textContent='Tell us your name.';
+er.textContent='';U={name:mode==2?nm:cap(em.split('@')[0]),email:em};try{localStorage.setItem('hl-user',JSON.stringify(U))}catch(x){}greeted=false;location.hash='chat';route()};
+const out=()=>{U=null;greeted=false;try{localStorage.removeItem('hl-user')}catch(e){}msgs.innerHTML='';location.hash='top';route()};$('#lo').onclick=$('#lo2').onclick=out;
+$('#tg2').onclick=$('#tg3').onclick=()=>tg.click();$('#tg2').innerHTML=ico(isD()?'sun':'moon');
+$('#ssave').onclick=()=>{const n=$('#sname').value.trim();if(n){U.name=n;try{localStorage.setItem('hl-user',JSON.stringify(U))}catch(e){}}};$('#sclr').onclick=()=>{msgs.innerHTML='';greeted=false;location.hash='chat';route()};
+// reminders
+const fmt=ms=>{const s=Math.ceil(ms/1000);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')},when=t=>t?new Date(t).toLocaleString([],{weekday:'short',hour:'numeric',minute:'2-digit'}):'No time set';
+function rem(){$('#rl').innerHTML=ST.rem.length?ST.rem.map(r=>`<div class="row"><span class="ic u">${ico('watch')}</span><div><b>${r.text.replace(/</g,'&lt;')}</b><small>${when(r.at)}</small></div><button class="x" data-d="${r.id}" aria-label="Delete">×</button></div>`).join(''):'<p>No reminders yet.</p>'}
+$('#rl').onclick=e=>{const d=e.target.dataset.d;if(d){ST.rem=ST.rem.filter(r=>r.id!=d);sv_();rem()}};
+function addRem(text,at){const r={id:Date.now(),text,at};ST.rem.push(r);sv_();rem();arm(r)}
+function arm(r){const d=r.at-Date.now();if(r.at&&d>0&&d<2e9)setTimeout(()=>{if(ST.rem.includes(r)&&U){reply(['Reminder: '+r.text+'.'],'happy',5000);ST.rem=ST.rem.filter(x=>x!==r);sv_();rem()}},d)}
+ST.rem.forEach(arm);
+$('#rf').onsubmit=e=>{e.preventDefault();const t=$('#rt').value.trim();if(!t)return;const v=$('#rm').value;let at=null;if(v){const d=new Date(),[h,m]=v.split(':');d.setHours(h,m,0,0);if(d<Date.now())d.setDate(d.getDate()+1);at=+d}addRem(t,at);$('#rt').value=''};
+function ptm(s){let m=s.match(/\bin (\d+|an?|half an?)\s*(sec|second|min|minute|hour|hr|day)s?\b/);if(m){const n=/^\d/.test(m[1])?+m[1]:m[1][0]=='h'?.5:1,u=m[2][0]=='s'?1e3:m[2][0]=='m'?6e4:m[2][0]=='h'?36e5:864e5;return{at:Date.now()+n*u,cut:m[0]}}
+m=s.match(/\b(?:at )?(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b|\bat (\d{1,2})(?::(\d{2}))?\b/);if(m){let h=+(m[1]||m[4]),mi=+(m[2]||m[5]||0);if(m[3]=='pm'&&h<12)h+=12;if(m[3]=='am'&&h==12)h=0;const d=new Date();d.setHours(h,mi,0,0);if(/tomorrow/.test(s)||d<Date.now())d.setDate(d.getDate()+1);return{at:+d,cut:m[0]}}
+if(/tomorrow/.test(s)){const d=new Date();d.setDate(d.getDate()+1);d.setHours(9,0,0,0);return{at:+d,cut:'tomorrow'}}return null}
+// check-in
+function startCI(m){clearInterval(ciT);ST.ci={end:Date.now()+m*6e4,m};ciT=setInterval(tick,1000);tick()}
+function stopCI(){clearInterval(ciT);ST.ci=null;tick()}
+function tick(){const c=ST.ci,s=$('#sy');if(!c){s.hidden=true;$('#ctime').textContent='No active check-in';$('#cr').style.strokeDashoffset=1;return}const l=Math.max(0,c.end-Date.now());s.hidden=false;s.textContent='Check-in · '+fmt(l);$('#ctime').textContent=fmt(l);$('#cr').style.strokeDashoffset=1-l/(c.m*6e4);
+if(l<=0){clearInterval(ciT);ST.ci=null;tick();reply(['No reply yet, '+U.name+'. I’m alerting Maya and sharing your location now. (Demo: nobody was actually contacted.)','Tell me “I’m safe” any time and I’ll let her know.'],'sad',9000)}}
+document.querySelector('[data-ci]').parentNode.onclick=e=>{const k=e.target.dataset.ci;if(k==null)return;if(k=='0'){if(ST.ci)stopCI()}else startCI(+k)};
+// home
+function home(){const h=ST.home;$('#hd').checked=h.door;$('#hl').checked=h.lights;$('#ht').textContent=h.temp+'°'}
+$('#hd').onchange=e=>{ST.home.door=e.target.checked;sv_()};$('#hl').onchange=e=>{ST.home.lights=e.target.checked;sv_()};
+$('#p-home').onclick=e=>{const d=e.target.dataset.t;if(d){ST.home.temp=Math.max(10,Math.min(30,ST.home.temp+ +d));sv_();home()}};
+// understanding
+function handle(t){const s=t.toLowerCase().trim(),H=ST.home;let m;
+if(pend&&pend.k=='rem'){const p=ptm(s);if(p){const r=pend;pend=null;addRem(r.text,p.at);return reply(['Done. I’ll remind you to '+r.text+' on '+when(p.at)+'.'],'happy')}pend=null}
+if(pend&&pend.k=='ci'&&/^(yes|yeah|yep|sure|ok|okay|please|do it)\b/.test(s)){pend=null;startCI(5);return reply(['Check-in started. I’ll check on you in 5 minutes, and if you don’t answer I’ll alert Maya.'],'happy')}
+if(/\b(help me|emergency|dizzy|chest pain|can.?t breathe|i fell|scared|unsafe|followed|hurt)\b/.test(s)){pend={k:'ci'};return reply(['I’m here with you. If you’re in danger or need urgent medical help, call your local emergency number now.','Want me to start a 5-minute check-in so Maya is alerted if you don’t answer?'],'sad',6000)}
+if(/\b(i.?m|i am) (safe|home|ok|okay|fine|back)\b|cancel (the |my )?check/.test(s)){const w=!!ST.ci;stopCI();return reply([w?'Glad you’re safe, '+U.name+'. Check-in ended and Maya knows.':'Welcome back. No check-in was running.'],'happy')}
+if(/check.?in|walking (home|alone)|heading home/.test(s)){m=s.match(/(\d+)\s*(min|hour|hr)/);const n=m?(m[2]=='min'?+m[1]:+m[1]*60):15;startCI(n);return reply(['Check-in is on. I’ll check on you in '+n+' min, and if you don’t reply I’ll alert Maya and share your location.','Stay on the lit route. I’m here.'],'happy')}
+if(/\bremind|reminder|alarm/.test(s)){if(/(what|show|list|my).*(remind)/.test(s)&&!/remind me/.test(s))return reply([ST.rem.length?'You have '+ST.rem.length+': '+ST.rem.map(r=>r.text+' ('+when(r.at)+')').join('; ')+'.':'You have no reminders yet.'],'idle');
+const p=ptm(s);let x=t.replace(/^.*?remind(?: me)?(?: to)?\s*/i,'');if(p)x=x.replace(new RegExp(p.cut.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),'');x=x.replace(/\s+/g,' ').replace(/^(to|about)\s+/i,'').trim()||'Reminder';
+if(!p){pend={k:'rem',text:x};return reply(['Sure. When should I remind you to '+x+'?'],'listen')}addRem(x,p.at);return reply(['Done. I’ll remind you to '+x+' on '+when(p.at)+'.'],'happy')}
+if(/good ?night|going to bed|heading to bed|bedtime/.test(s)){H.door=true;H.lights=false;H.temp=18;sv_();home();return reply(['Doors are locked, lights are off and the thermostat is set to 18°. Good night, '+U.name+'.'],'happy')}
+if(/\block\b|\bunlock/.test(s)){H.door=!/unlock/.test(s);sv_();home();return reply([H.door?'The front door is locked.':'The front door is unlocked. I’ll remind you to lock it later.'],'happy')}
+if(/light/.test(s)){H.lights=!/\boff\b|dim|turn.*down/.test(s);sv_();home();return reply([H.lights?'Lights are on.':'Lights are off.'],'happy')}
+if(/thermostat|temperature|heat|cool|°|degrees/.test(s)){m=s.match(/(\d{2})/);if(m)H.temp=Math.max(10,Math.min(30,+m[1]));else H.temp+=/cool|lower|down|colder/.test(s)?-1:1;sv_();home();return reply(['Thermostat is set to '+H.temp+'°.'],'happy')}
+if(/sleep|heart|medic|pill|health/.test(s))return reply(['You slept 7h 12m and had a calm night. Resting heart rate was 58, two lower than last week.','Your 8 pm medication reminder is on.'],'happy');
+if(/maya|dad|family|everyone/.test(s))return reply(['Dad’s watch shows a normal evening. Maya got home at 6:42 pm. No alerts today.'],'happy');
+if(/thank/.test(s))return reply(['Anytime, '+U.name+'.'],'happy');
+if(/^(hi|hello|hey|yo)\b/.test(s))return reply(['Hi '+U.name+'. What can I do for you?'],'happy');
+if(/what can you|help$|who are you|what do you do/.test(s))return reply(['I’m JORDAN. I can set reminders, run safety check-ins and control your door, lights and thermostat.','Try: “remind me to call Mum at 6 pm”.'],'happy');
+return reply(['I didn’t quite catch that. Try “remind me to take my medication at 8 pm”, “check in with me in 15 minutes” or “lock the front door”.'],'think',2500)}
+$('#cf').onsubmit=e=>{e.preventDefault();const t=ci.value.trim();if(!t||busy)return;ci.value='';say('u',t);handle(t)};
+ci.oninput=()=>mood(ci.value?'listen':'idle');ci.onblur=()=>{if(!busy)mood('idle')};
+$('#chips').innerHTML=['Remind me to take my medication at 8 pm','Check in with me in 15 minutes','Lock the front door','Good night'].map(c=>`<button type="button">${c}</button>`).join('');
+$('#chips').onclick=e=>{if(e.target.tagName=='BUTTON'&&!busy){say('u',e.target.textContent);handle(e.target.textContent)}};
+(()=>{const c=document.querySelector('.ap');if(!c)return;const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,o=c.querySelector('.ao'),e=c.querySelector('.ae');
+new IntersectionObserver((x,io)=>{if(x[0].isIntersecting){c.classList.add('in');io.disconnect()}},{threshold:.2}).observe(c);
+c.addEventListener('pointermove',ev=>{const r=c.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width-.5,y=(ev.clientY-r.top)/r.height-.5;c.style.setProperty('--px',(x+.5)*100+'%');c.style.setProperty('--py',(y+.5)*100+'%');if(rm)return;o.style.transform='rotateY('+x*14+'deg) rotateX('+-y*14+'deg)';e.style.transform='translate('+x*16+'px,'+y*10+'px)'});
+c.addEventListener('pointerleave',()=>{o.style.transform='';e.style.transform=''});
+c.querySelectorAll('.ab').forEach(b=>{b.addEventListener('pointermove',ev=>{if(rm)return;const r=b.getBoundingClientRect();b.style.transform='translate('+(ev.clientX-r.left-r.width/2)*.15+'px,'+(ev.clientY-r.top-r.height/2)*.25+'px)'});b.addEventListener('pointerleave',()=>b.style.transform='')});
+o.addEventListener('click',()=>{c.classList.add('smile');setTimeout(()=>c.classList.remove('smile'),1600)})})();
+if(U&&!location.hash)location.hash='chat';route();
 </script>
 </body>
 </html>
